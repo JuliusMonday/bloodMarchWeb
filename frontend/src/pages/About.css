@@ -1,0 +1,37 @@
+.about-container {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6666;
+    background-color: #f9f9f9;
+}
+
+.founder-info, .mission-statement, .vision-statement {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #ff6666;
+}
+h1{
+    color: #ff6666;
+}
+p {
+    line-height: 1.6;
+    color: #0f172a;
+}
+
+strong {
+    color: #ff6666;
+}

@@ -1,0 +1,32 @@
+.scroll-container {
+    overflow: hidden; /* Hide overflow to create a seamless effect */
+    white-space: nowrap; /* Prevent line breaks within the container */
+    max-width: 900px; /* Ensure it doesn't exceed the parent's width */
+    position: relative; /* Position relative for absolute child */
+    margin: 20px auto;
+    background-color: transparent;
+    border-radius: 40px;
+     box-shadow: 0 0 5px red;
+     margin-top: 80px;
+  }
+  
+  .scroll-content {
+    display: inline-block; /* Keep SVG inline for scrolling */
+    animation: scroll-left 40s linear infinite; /* Animation for scrolling */
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left */
+    }
+  }
+  /* media query for smaller screens */
+  @media (max-width: 768px){
+    .scroll-container {
+      margin-top: 200px;
+    }
+    
+  }

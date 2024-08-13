@@ -1,0 +1,68 @@
+.blog-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section-blog {
+    height: 80vh;
+    background-image: url('https://unsplash.com/photos/a-tall-building-with-a-sky-background-JF5SChGtuZQ');
+    /* background-color: antiquewhite; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #CD5E55;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero-button:hover {
+    background-color: #ff6666;
+}
+
+.posts-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.posts-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    margin: 0;
+}
+
+.post p {
+    margin: 10px 0 0;
+}

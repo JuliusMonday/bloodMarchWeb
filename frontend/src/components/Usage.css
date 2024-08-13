@@ -1,0 +1,124 @@
+.usage-main-container {
+    background-color: #FFECE8; /* Only define background color once */
+    width: 100%;
+    height: auto; /* Allows the container to adjust based on content */
+    overflow: hidden; /* Optional: hides any overflow content */
+}
+
+.usage-container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+   /* gap: 40px; */
+}
+.container-general {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px; /* Adds padding inside the container */
+    max-width: 1200px; /* Sets a maximum width */
+    width: 100%; /* Ensures it takes full width */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+.usage-header{
+    color:#0f172a;
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.usage-image {
+    flex: 2; 
+    max-width: 70%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border-radius: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.usage-image img {
+    max-width: 100%; 
+    height: 600px;
+    border-radius: 25px;
+}
+.usage-contents{
+   display: flex;
+   gap: 20px;
+}
+.usage-steps{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+.steps{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2e8e6;
+}
+.usage-contents .step{
+   color:#ff6666;
+   font-size: 1.25rem;
+   font-weight: 700;
+}
+.step-text{
+    color:#0f172a;
+    font-size: 1.25rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    width:80%;
+}
+@media (max-width: 768px){
+    .usage-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    .usage-image{
+        width: 100%;
+        height: 600px;
+        border-radius: 20px;
+        padding-top: 40px;
+    }
+    .usage-image img{
+        max-width: 100%;
+        height: 500px;     
+        display: block;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+    }
+    .usage-contents{
+        flex-direction: column;
+    }
+    .usage-steps{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .usage-header{
+        color:#0f172a;
+        font-size: 2.25rem;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        width: 70%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .step-text{
+        color:#0f172a;
+        font-size: 1.25rem;
+        font-family: "Open Sans", sans-serif;
+    }
+    .steps{
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+}

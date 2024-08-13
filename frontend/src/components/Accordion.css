@@ -1,0 +1,24 @@
+.accordion {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .accordion-body {
+    padding: 15px;
+    background: #fff;
+  }
+  h3{
+    font-family: "Open Sans",sans-serif;
+    font-weight: 700;
+  }
+  
