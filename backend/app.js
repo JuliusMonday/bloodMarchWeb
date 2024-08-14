@@ -9,11 +9,16 @@ const host = process.env.HOST || "127.0.0.1";
 
 // middlewares
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://bloodmatch.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
+  
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-// app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
 // database connection
 connectToDb();
 
