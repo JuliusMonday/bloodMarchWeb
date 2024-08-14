@@ -36,7 +36,7 @@ const BloodCompare = () => {
         </div>
       </div>
       <Usage/>
-      {/* <BloodGroupComparison/> */}
+      <BloodGroupComparison/>
       <HorizontalScrollingSvg/>
       <Accordion/>
       <Footer/>

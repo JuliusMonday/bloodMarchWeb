@@ -27,7 +27,7 @@ const BloodGroupComparison = () => {
             }
         };
         fetchBloodGroups();
-    }, []);
+    }, [apiUrl]);
 
     const handleComparison = async () => {
         setError('');
@@ -48,10 +48,9 @@ const BloodGroupComparison = () => {
         }
     };
 
-
     return (
         <div className='blood-container'>
-            <h1 className="headerText">Check for your blood compatibility</h1>
+            <h1 className="headerText">Check for Your Blood Compatibility</h1>
             <div className="sub-blood-container container-general">
                 <div className="compatibility-section">
                     <h1>Blood Group Comparison</h1>
@@ -83,18 +82,26 @@ const BloodGroupComparison = () => {
                 <div className="result-display">
                     {compatibility && (
                         <div className='result-sub-section'>
-                            <h3>Compatibility Status:</h3><br/>
+                            <h3>Compatibility Status:</h3>
                             <div>
                                 <h3>Your Blood Group: {userBloodGroup}</h3>
-                                <p>Can Donate To: {compatibility.user.canDonateTo.join(', ')}</p>
-                                <p>Can Receive From: {compatibility.user.canReceiveFrom.join(', ')}</p>
-                                <p className='health'>Health Considerations: {compatibility.user.diseases}</p>
+                                {compatibility.user && (
+                                    <>
+                                        <p>Can Donate To: {compatibility.user.canDonateTo.join(', ')}</p>
+                                        <p>Can Receive From: {compatibility.user.canReceiveFrom.join(', ')}</p>
+                                        <p className='health'>Health Considerations: {compatibility.user.diseases}</p>
+                                    </>
+                                )}
                             </div>
                             <div>
                                 <h3>Partner&apos;s Blood Group: {partnerBloodGroup}</h3>
-                                <p>Can Donate To: {compatibility.partner.canDonateTo.join(', ')}</p>
-                                <p>Can Receive From: {compatibility.partner.canReceiveFrom.join(', ')}</p>
-                                <p className='health'>Health Considerations: {compatibility.partner.diseases}</p>
+                                {compatibility.partner && (
+                                    <>
+                                        <p>Can Donate To: {compatibility.partner.canDonateTo.join(', ')}</p>
+                                        <p>Can Receive From: {compatibility.partner.canReceiveFrom.join(', ')}</p>
+                                        <p className='health'>Health Considerations: {compatibility.partner.diseases}</p>
+                                    </>
+                                )}
                             </div>
                             <div>
                                 <h3>Compatibility Results:</h3>
