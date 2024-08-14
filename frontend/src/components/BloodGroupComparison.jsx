@@ -16,12 +16,16 @@ const BloodGroupComparison = () => {
         const fetchBloodGroups = async () => {
             try {
                 const response = await axios.get(`${apiUrl}/api/blood-groups`);
-                setBloodGroups(response.data);
+                if (response.status === 200) {
+                    setBloodGroups(response.data);
+                } else {
+                    setError('Failed to fetch blood groups.');
+                }
             } catch (error) {
                 console.error('Error fetching blood groups:', error);
+                setError('Error fetching blood groups. Please try again later.');
             }
         };
-
         fetchBloodGroups();
     }, []);
 
@@ -100,11 +104,16 @@ const BloodGroupComparison = () => {
                         </div>
                     )}
                     <div className="blood-groups-btn">
-                        {bloodGroups.map((bg) => (
-                            <button className="groups" key={bg.id}>
-                                <Link to={`/blood${bg.group}`}>{bg.group}</Link>
-                            </button>
-                        ))}
+                        <div className="blood-groups-btn">
+                            <button className="groups"><Link to="/bloodA+" >A+</Link></button>
+                            <button className="groups"><Link to="/bloodA-" >A-</Link></button>
+                            <button className="groups"><Link to="/bloodB+" >B+</Link></button>
+                            <button className="groups"><Link to="/bloodB-">B-</Link></button>
+                            <button className="groups"><Link to="/bloodAB+" >AB+</Link></button>
+                            <button className="groups"><Link to="/bloodAB-" >AB-</Link></button>
+                            <button className="groups"><Link to="/bloodO+" >O+</Link></button>
+                            <button className="groups"><Link to="/bloodO-" >O-</Link></button>
+                        </div>
                     </div>
                 </div>
             </div>
