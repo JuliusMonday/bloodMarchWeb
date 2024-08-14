@@ -10,10 +10,12 @@ const BloodGroupComparison = () => {
     const [compatibility, setCompatibility] = useState(null);
     const [error, setError] = useState('');
 
+    const apiUrl = "https://backend-j2yx.onrender.com/";
+
     useEffect(() => {
         const fetchBloodGroups = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/blood-groups');
+                const response = await axios.get(`${apiUrl}/api/blood-groups`);
                 setBloodGroups(response.data);
             } catch (error) {
                 console.error('Error fetching blood groups:', error);
@@ -27,7 +29,7 @@ const BloodGroupComparison = () => {
         setError('');
         if (userBloodGroup && partnerBloodGroup) {
             try {
-                const response = await axios.post('http://localhost:5000/api/check-compatibility', {
+                const response = await axios.post(`${apiUrl}/api/check-compatibility`, {
                     userBloodGroup,
                     partnerBloodGroup,
                 });
@@ -41,6 +43,7 @@ const BloodGroupComparison = () => {
             setError('Both blood groups must be selected.');
         }
     };
+
 
     return (
         <div className='blood-container'>
