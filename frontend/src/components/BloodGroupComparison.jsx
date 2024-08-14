@@ -10,7 +10,7 @@ const BloodGroupComparison = () => {
     const [compatibility, setCompatibility] = useState(null);
     const [error, setError] = useState('');
 
-    const apiUrl = "https://backend-j2yx.onrender.com/";
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         const fetchBloodGroups = async () => {
