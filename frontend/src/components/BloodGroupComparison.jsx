@@ -66,9 +66,9 @@ const BloodGroupComparison = () => {
                         </select>
                     </div>
                     <div>
-                        <label>Partner&apos;s Blood Group💕</label>
+                        <label>Choose another blood-group to compare(partner&apos;s blood group)💕</label>
                         <select className="style-select" onChange={(e) => setPartnerBloodGroup(e.target.value)} value={partnerBloodGroup}>
-                            <option value="">Select partner&apos;s blood group</option>
+                            <option value="">Choose another blood-group to compare</option>
                             {bloodGroups.map((bg) => (
                                 <option key={bg.id} value={bg.group}>
                                     {bg.group}
