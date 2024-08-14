@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom';
 import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
 import './Footer.css';
 import { useState, useEffect } from 'react'
+import logo from "../../bloodMatchLogo.png"
 const Footer = () => {
     const [time, setTime] = useState(new Date().toLocaleTimeString());
 
@@ -17,7 +18,7 @@ const Footer = () => {
     <div className="footer-main-container">
         <div className="footer-sub-container">
             <div className="footer-logo-and-time">
-                <img src="../../bloodMatchLogo.png" alt="" />
+                <img src={logo} alt="logo" />
                 <div className='timer'>
                     <p>Your Current Time: {time}</p>
                 </div>
