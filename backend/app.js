@@ -20,7 +20,9 @@ connectToDb();
 // Import routes
 const authRoutes = require("./routes/blogRoutes");
 const userRoutes = require("./routes/bloodGroupRoutes");
-
+app.get('*', (req, res) => {
+    res.json({message:"this is just the backend use the normal url"})
+})
 // Use routes
 app.use("/api/auth", authRoutes);
 app.use("/api/", userRoutes);
