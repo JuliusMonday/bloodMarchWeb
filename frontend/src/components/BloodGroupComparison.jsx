@@ -87,8 +87,8 @@ const BloodGroupComparison = () => {
                                 <h3>Your Blood Group: {userBloodGroup}</h3>
                                 {compatibility.user && (
                                     <>
-                                        <p>Can Donate To: {compatibility.user.canDonateTo.join(', ')}</p>
-                                        <p>Can Receive From: {compatibility.user.canReceiveFrom.join(', ')}</p>
+                                        <p>You Can Donate To: {compatibility.user.canDonateTo.join(', ')}</p>
+                                        <p>You Can Receive From: {compatibility.user.canReceiveFrom.join(', ')}</p>
                                         <p className='health'>Health Considerations: {compatibility.user.diseases}</p>
                                     </>
                                 )}
@@ -97,16 +97,16 @@ const BloodGroupComparison = () => {
                                 <h3>Partner&apos;s Blood Group: {partnerBloodGroup}</h3>
                                 {compatibility.partner && (
                                     <>
-                                        <p>Can Donate To: {compatibility.partner.canDonateTo.join(', ')}</p>
-                                        <p>Can Receive From: {compatibility.partner.canReceiveFrom.join(', ')}</p>
+                                        <p>You Can Donate To: {compatibility.partner.canDonateTo.join(', ')}</p>
+                                        <p>You Can Receive From: {compatibility.partner.canReceiveFrom.join(', ')}</p>
                                         <p className='health'>Health Considerations: {compatibility.partner.diseases}</p>
                                     </>
                                 )}
                             </div>
                             <div>
                                 <h3>Compatibility Results:</h3>
-                                <p>You can donate to your partner: <span className='answer'>{compatibility.compatibility.canUserDonateToPartner ? 'Yes' : 'No'}</span></p>
-                                <p>Your partner can donate to you: <span className='answer'>{compatibility.compatibility.canPartnerDonateToUser ? 'Yes' : 'No'}</span></p>
+                                <p>Can I Donate to My Partner : <span className='answer'>{compatibility.compatibility.canUserDonateToPartner ? 'Yes' : 'No'}</span></p>
+                                <p>Can My Partner Donate to Me? : <span className='answer'>{compatibility.compatibility.canPartnerDonateToUser ? 'Yes' : 'No'}</span></p>
                             </div>
                         </div>
                     )}
