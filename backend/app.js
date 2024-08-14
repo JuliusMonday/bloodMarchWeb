@@ -25,12 +25,12 @@ connectToDb();
 // Import routes
 const authRoutes = require("./routes/blogRoutes");
 const userRoutes = require("./routes/bloodGroupRoutes");
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.json({message:"this is just the backend use the normal url"})
 })
 // Use routes
 app.use("/api/auth", authRoutes);
 app.use("/api/", userRoutes);
 app.listen(port, "0.0.0.0", () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port http://localhost:${port}`);
 });
