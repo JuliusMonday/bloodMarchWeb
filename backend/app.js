@@ -12,6 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 app.use(express.static("public"));
 // database connection
 connectToDb();
@@ -23,6 +24,6 @@ const userRoutes = require("./routes/bloodGroupRoutes");
 // Use routes
 app.use("/api/auth", authRoutes);
 app.use("/api/", userRoutes);
-app.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+app.listen(port, "0.0.0.0", () => {
+    console.log(`Server is running on port ${port}`);
 });
